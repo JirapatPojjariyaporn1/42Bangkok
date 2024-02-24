@@ -3,53 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cpojjari <cpojjari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 16:02:21 by marvin            #+#    #+#             */
-/*   Updated: 2024/02/22 16:02:21 by marvin           ###   ########.fr       */
+/*   Updated: 2024/02/25 02:31:45 by cpojjari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
+char
+	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	i = 0;
-	j = 0;
-	if (needle == NULL || needle[0] == '\0')
+	if (!haystack || !needle)
+		return (NULL);
+	if (!needle || !needle[0])
 		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < n)
+	i = 0;
+	while (haystack[i] && i < len)
 	{
-		if (haystack[i] == needle[j])
-		{
-			while (haystack[i + j] == needle[j] && i + j < n)
-			{
-				if (needle[j + 1] == '\0')
-					return ((char *)haystack + i);
-				j++;
-			}
-			j = 0;
-		}	
+		j = 0;
+		while (haystack[i + j] && needle[j] &&
+			i + j < len && haystack[i + j] == needle[j])
+			j++;
+		if (!needle[j])
+			return ((char *)(haystack + i));
 		i++;
 	}
 	return (NULL);
 }
-
-// int main() {
-//     const char *str = "hello world";
-//     const char *sub = "world";
-
-//     char *result = ft_strnstr(str, sub, 12);
-
-//     if (result != NULL) {
-//         printf("Substring found at position: %ld\n", result - str); 
-//     } else {
-//         printf("Substring not found.\n"); 
-//     }
-
-//     return 0;
-// }

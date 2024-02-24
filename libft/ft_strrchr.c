@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cpojjari <cpojjari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 13:09:20 by marvin            #+#    #+#             */
-/*   Updated: 2024/02/22 13:09:20 by marvin           ###   ########.fr       */
+/*   Updated: 2024/02/25 01:26:49 by cpojjari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -29,11 +28,10 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-
 // int main() {
 //     char str[] = "Hello, world!";
 //     char *ptr;
- 
+
 //     ptr = strrchr(str, 'o');
 
 //     if (ptr != NULL) {
@@ -41,5 +39,5 @@ char	*ft_strrchr(const char *s, int c)
 //     } else {
 //         printf("Not Found","\n");
 //     }
-//     return 0;
+//     return (0);
 // }

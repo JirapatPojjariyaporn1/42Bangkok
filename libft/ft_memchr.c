@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cpojjari <cpojjari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:18:54 by marvin            #+#    #+#             */
-/*   Updated: 2024/02/22 15:18:54 by marvin           ###   ########.fr       */
+/*   Updated: 2024/02/25 01:25:47 by cpojjari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -36,5 +35,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 //         printf("Character 'o' not found in the string.\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }
